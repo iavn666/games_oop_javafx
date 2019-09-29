@@ -4,7 +4,7 @@ import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
 /**
- * @author Petr Arsentev (parsentev@yandex.ru)
+ * @author ivan Dvoeglazov
  * @version $Id$
  * @since 0.1
  */
@@ -22,31 +22,26 @@ public class BishopBlack implements Figure {
 
     @Override
     public Cell[] way(Cell source, Cell dest) {
-    //    if (!isDiagonal(source, dest)) {
-      //      throw new IllegalStateException(
-       //             String.format("Could not way by diagonal from %s to %s", source, dest)
-       //     );
-      //  }
-        int size = 4;
+        if (!isDiagonal(source, dest)) {
+           throw new IllegalStateException(
+                    String.format("Could not move by diagonal from %s to %s", source, dest)
+           );
+        }
+        int size = Math.abs(dest.x - source.x);
         Cell[] steps = new Cell[size];
-        int deltaX = 2;
-        int deltaY = 0;
+        int deltaX = (dest.x - source.x) > 0 ? 1: -1;
+        int deltaY = (dest.y - source.y) > 0 ? 1: -1;
         for (int index = 0; index < size; index++) {
-            steps[index] = Cell.findBy(deltaX,deltaY);
-
+            steps[index] = Cell.findBy(source.x + deltaX++,source.y + deltaY++);
 
         }
         return steps;
-    }
-
-
-
-
-
-
+       }
 
     public boolean isDiagonal(Cell source, Cell dest) {
-        //TODO check diagonal
+        if(dest.x > source.x && dest.y > source.y) {
+            return true;
+        }
         return false;
     }
 

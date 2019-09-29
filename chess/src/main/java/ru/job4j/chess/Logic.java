@@ -9,7 +9,7 @@ import java.util.Optional;
 /**
  * //TODO add comments.
  *
- * @author Petr Arsentev (parsentev@yandex.ru)
+ * @author Ivan Dvoeglazov
  * @version $Id$
  * @since 0.1
  */

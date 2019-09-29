@@ -33,6 +33,14 @@ public enum Cell {
         return result;
     }
 
+   // public static Cell[] move(Cell source, Cell dest) {
+
+     //  int size = Math.abs(dest.x - source.x);
+       //Cell[] move = new Cell[size];
+
+
+    //}
+
 
 
 
