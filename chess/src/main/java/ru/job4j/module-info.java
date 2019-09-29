@@ -3,4 +3,5 @@ module chess {
     requires javafx.controls;
     opens ru.job4j.chess to javafx.fxml;
     exports ru.job4j.chess;
+    
 }
