@@ -6,7 +6,7 @@ import ru.job4j.chess.firuges.Figure;
 /**
  * //TODO add comments.
  *
- * @author Petr Arsentev (parsentev@yandex.ru)
+ * @author  Ivan Dvoeglazov
  * @version $Id$
  * @since 0.1
  */
@@ -31,4 +31,6 @@ public class PawnWhite implements Figure {
     public Figure copy(Cell dest) {
         return new PawnWhite(dest);
     }
+
+
 }

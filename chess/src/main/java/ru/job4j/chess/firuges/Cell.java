@@ -33,13 +33,13 @@ public enum Cell {
         return result;
     }
 
-   // public static Cell[] move(Cell source, Cell dest) {
+    public static Cell[] move(Cell source, Cell dest) {
+        Cell result = null;
+        for (Cell a; Cell.values()) {
 
-     //  int size = Math.abs(dest.x - source.x);
-       //Cell[] move = new Cell[size];
+        }
 
-
-    //}
+    }
 
 
 
